@@ -20,6 +20,7 @@
     <!--Javascript-->
     <script src="/WorkOutLog/js/tabs.js" defer></script> <!--tabs--> 
     <script src="/WorkOutLog/js/validation.js?version=<?= time() ?>" defer></script> <!--validation-->
+    <script src="main.js"></script>
 
 </head>
 <body>
