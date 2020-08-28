@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css?id=1234">
 
     <!--icons-->
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
@@ -13,6 +13,10 @@
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <title>Document</title>
+
+    <!-- javascript -->
+    <script type='module' src="/WorkOutLog/src/controllers/workoutController.js" ></script>
+    
 </head>
 <body>
 
@@ -24,7 +28,7 @@
     
     <div class="flex-container">
         <div class="white-box max-width">
-            <a href="#" class="add-icon-link">
+            <a href="/WorkOutLog/addWorkout2.html.php" class="add-icon-link" id="create-new-workout">
                 <ion-icon class="add-icon-link__icon" name="add-circle-sharp"></ion-icon>                
                 <span class="add-icon-link__text">ADD NEW WORKOUT</span>
             </a>

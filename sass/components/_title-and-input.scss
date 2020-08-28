@@ -13,11 +13,23 @@
         //border:0.1rem solid grey;
         border:none;
         padding:0.5rem 2rem;
+        outline:none;
+        text-align: center;
 
         &--workout {
             margin-left:2rem;
         }
         
+        &--big {
+            font-size:4.5rem;
+            width:22rem;
+            padding-top:2rem;
+            padding-bottom:1rem;
+            outline:none;
+            background-color:$color-grey;
+            border:none;
+            text-align: center;
+        }
     }
 
     &__icon {

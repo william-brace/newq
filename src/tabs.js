@@ -1,27 +1,31 @@
 const tabs = document.querySelectorAll('[data-tab-target');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget);
-    tabContents.forEach(content => {
-      //clear active classes before adding new ones
-      content.classList.remove('active');
-      if("lastActive" in localStorage){
-        let selectedTab = (`tabs-${localStorage.getItem('lastActive')}`);
-        document.getElementById(selectedTab).classList.remove('active');
-      }
-    });
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      
 
-    //only need to do form active here because focus class in css takes care of tab changing colour
-    target.classList.add('active');
-    localStorage.setItem('lastActive', target.id);
+      const target = document.querySelector(tab.dataset.tabTarget);
+      tabContents.forEach(content => {
+        //clear active classes before adding new ones
+        content.classList.remove('active');
+        if("lastActive" in localStorage){
+          let selectedTab = (`tabs-${localStorage.getItem('lastActive')}`);
+          document.getElementById(selectedTab).classList.remove('active');
+        }
+      });
+
+      //only need to do form active here because focus class in css takes care of tab changing colour
+      target.classList.add('active');
+      localStorage.setItem('lastActive', target.id);
+    });
   });
-});
+
 
 
 //Ensures that last selected form tab, whether sign-up or signin, is still selected on page refresh
 window.addEventListener('load', (event) => {
+
   //In the case that the person has used this app before, and thus has a tab selected stored in their local storage
   if("lastActive" in localStorage){
     document.getElementById(localStorage.getItem('lastActive')).classList.add('active');

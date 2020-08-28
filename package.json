@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "build":"webpack -w"
+    "build": "webpack -w"
   },
   "author": "William Brace",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "uniqid": "^5.2.0"
+  },
   "devDependencies": {
     "node-sass": "^4.14.1",
     "webpack": "^4.44.1",

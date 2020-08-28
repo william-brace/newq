@@ -189,9 +189,20 @@ body {
   .title-and-input__input {
     border-radius: 0.5rem;
     border: none;
-    padding: 0.5rem 2rem; }
+    padding: 0.5rem 2rem;
+    outline: none;
+    text-align: center; }
     .title-and-input__input--workout {
       margin-left: 2rem; }
+    .title-and-input__input--big {
+      font-size: 4.5rem;
+      width: 22rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      outline: none;
+      background-color: #F7F7F7;
+      border: none;
+      text-align: center; }
   .title-and-input__icon {
     height: 4rem;
     width: 4rem;
@@ -231,11 +242,12 @@ body {
     flex-direction: row;
     font-size: 1.5rem;
     padding: 1rem 3rem;
-    width: 100%;
-    background-color: rgba(23, 203, 197, 0.507); }
+    width: 100%; }
     .card__slot--workout {
       flex-direction: column;
       background-color: white; }
+    .card__slot--finalised {
+      background-color: rgba(23, 203, 197, 0.506); }
   .card__input {
     width: 4rem;
     border-radius: 0.5rem;
@@ -299,6 +311,59 @@ body {
 
 .active[data-tab-content] {
   display: inline-block; }
+
+.search-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: 0.1px solid #ddd;
+  border-radius: 2rem; }
+  .search-list__input {
+    width: 100%;
+    /* Full-width */
+    font-size: 2rem;
+    padding: 1.2rem 2rem;
+    /* Add some padding */
+    text-align: center;
+    border: none;
+    border-radius: 2rem 2rem 0 0;
+    outline: none; }
+  .search-list__list {
+    list-style-type: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 50vh; }
+  .search-list__item {
+    border-bottom: 1px solid #ddd;
+    /* Add a border to all links */
+    border-top: 1px solid #ddd;
+    /* Add a border to all links */
+    margin-top: -1px;
+    /* Prevent double borders */
+    background-color: #f6f6f6;
+    /* Grey background color */
+    padding: 12px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove default text underline */
+    font-size: 18px;
+    /* Increase the font-size */
+    color: black;
+    /* Add a black text color */
+    display: block;
+    /* Make it into a block element to fill the whole list */
+    text-align: center; }
+    .search-list__item--selected {
+      background-color: rgba(23, 203, 197, 0.506); }
+  .search-list__btn {
+    width: 80vw;
+    font-size: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    border-radius: 0 0 2rem 2rem; }
 
 .max-width {
   width: 90vw; }

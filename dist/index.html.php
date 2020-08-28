@@ -18,8 +18,8 @@
 
 
     <!--Javascript-->
-    <script src="/WorkOutLog/js/tabs.js" defer></script> <!--tabs--> 
-    <script src="/WorkOutLog/js/validation.js?version=<?= time() ?>" defer></script> <!--validation-->
+    <script src="/WorkOutLog/src/tabs.js" defer></script> <!--tabs-->
+    <script src="/WorkOutLog/src/validation.js?version=<?= time() ?>" defer></script> <!--validation -->
     <script src="main.js"></script>
 
 </head>
@@ -37,7 +37,7 @@
             <div class="header__group1">
                 <h1 class=header__title>WorkOutLog</h1>
                 <h1 class="header__text">Better tracking.<br> Better progress.<br> Better YOU.</h1>
-                <a href=# class="btn btn--green header__btn flex-row"> ADD WORKOUT </a>
+                <a href="/WorkOutLog/addWorkout1.html.php" class="btn btn--green header__btn flex-row"> ADD WORKOUT </a>
             </div>
             <div class="header__group2">
                 <div class="tabs">
@@ -111,7 +111,7 @@
         </a>
     </nav> -->
 
-    <?php include('bottomNav.html.php'); ?>
+    <?php include('../bottomNav.html.php'); ?>
             
     <!--<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> -->
 </body>
